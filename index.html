@@ -15,7 +15,7 @@
         header {
             background-color: #004466;
             color: #fff;
-            padding: 20px 10%;
+            padding: 30px 10%;
             text-align: center;
         }
         header h1 {
@@ -88,6 +88,31 @@
         }
         .contact-links a:hover {
             text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px; /* Optional, sets a max width for the form */
+            margin: 0 auto; /* Optional, centers the form */
+        }
+
+        input, textarea, button {
+            margin-bottom: 15px; /* Adds space between each element */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4c7faf; /* Blue button */
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #170d6e; /* Darker blue on hover */
         }
     </style>
 </head>
@@ -191,14 +216,21 @@
     <!-- Contact Links -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>If you'd like to connect, please reach out through any of the following platforms:</p>
+        <p>You can find more about me and my works at any of the following platforms:</p>
         <div class="contact-links">
-            <a href="mailto:agneevguin@gmail.com" target="_blank">E-Mail</a>
+            <!--a href="mailto:agneevguin@gmail.com" target="_blank">E-Mail</a-->
             <a href="https://www.linkedin.com/in/agneevguin" target="_blank">LinkedIn</a>
             <a href="https://www.researchgate.net/profile/Agneev-Guin" target="_blank">ResearchGate</a>
             <a href="https://orcid.org/0000-0001-7065-2192" target="_blank">ORCID</a>
             <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=tR3h5GAAAAAJ" target="_blank">Google Scholar</a>
         </div>
+        <p>If you'd like to connect, please drop in your details here and I shall reach back to you:</p>
+        <form action="https://formspree.io/f/xanygjpb" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
